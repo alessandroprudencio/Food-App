@@ -1,13 +1,9 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
 
-export default Details = () => {
+import DetailsComponent from '../../components/details/Details'
+
+export default Details = ({ navigation }) => {
     return (
-        <SafeAreaView>
-            <Text>
-                ola
-            </Text>
-        </SafeAreaView>
+        <DetailsComponent navigation={navigation} />
     )
-
 }

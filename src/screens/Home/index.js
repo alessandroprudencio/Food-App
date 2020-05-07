@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import Header from '../../components/layout/Header'
-import TabBar from '../../components/tabBar/TabBar'
+import Header from '../../components/home/Header'
+import TabBar from '../../components/home/tabBar/TabBar'
 
 export default Home = ({ navigation }) => {
     return (
