@@ -22,7 +22,7 @@ export default Menu = ({ navigation }) => {
                                 showsVerticalScrollIndicator={false}
                                 keyExtractor={(item, index) => index.toString()}
                                 renderItem={({ item }) => (
-                                    <TouchableOpacity onPress={() => navigation.navigate('Details', { item })}>
+                                    <TouchableOpacity onPress={() => navigation.navigate('Details', { ...item })}>
                                         <View style={styles.item_category}>
                                             <Image resizeMode="cover" source={item.image} style={styles.image} />
                                         </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     item: {
         marginTop: 10,
         flexDirection: "row",
-        paddingHorizontal: 10,
+        paddingHorizontal: 7,
         paddingVertical: 10,
         borderRadius: 10
     },
