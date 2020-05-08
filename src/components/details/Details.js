@@ -1,14 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, Image, View, ImageBackground, Dimensions, StatusBar } from 'react-native'
+import { StyleSheet, Text, Image, View, ImageBackground, TouchableOpacity, Dimensions, StatusBar } from 'react-native'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
+
+import { LinearGradient } from 'expo-linear-gradient'
 
 const { height } = Dimensions.get('screen')
 
 export default Details = ({ navigation }) => {
 
     function returnIngredients(array) {
-        // return array.map((item) => item = item).join(',').substring(0, (array.lenght - 1).concat(' e ' + 'ovos')
+        let text = ''
+        array.map((item, i) => array.length - 1 === i ? text = text.replace(array[array.length - 2] + ',', array[array.length - 2]) + ' e ' + item : text += item + ', ')
+        return text
     }
 
     return (
@@ -19,7 +23,7 @@ export default Details = ({ navigation }) => {
                     <Image style={styles.image} source={navigation.state.params.image} />
                 </View>
                 <View style={styles.back}>
-                    <Ionicons name="ios-arrow-round-back" size={35} color="white" onPress={() => navigation.goBack()} />
+                    <Ionicons name="ios-arrow-round-back" size={40} color="white" onPress={() => navigation.goBack()} />
                 </View>
             </ImageBackground>
             <View style={styles.footer}>
@@ -29,6 +33,16 @@ export default Details = ({ navigation }) => {
                 <Text style={styles.text_price}>{navigation.state.params.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Text>
                 <Text style={styles.text_name}>{navigation.state.params.name.toUpperCase()}</Text>
                 <Text style={styles.text_ingredients}>Ingredientes: {returnIngredients(navigation.state.params.ingredients)}</Text>
+                <TouchableOpacity style={styles.button}>
+                    <LinearGradient
+                        start={{ x: 0, y: 0 }}
+                        end={{ x: 1, y: 0 }}
+                        colors={['#e46700', '#ff9b49']}
+                        style={styles.button}
+                    >
+                        <Text style={styles.text_order_now}>Pedir agora</Text>
+                    </LinearGradient>
+                </TouchableOpacity>
             </View>
         </View >
     )
@@ -77,19 +91,34 @@ const styles = StyleSheet.create({
         color: "green"
     },
     text_price: {
-        color: "green",
+        color: "#e46700",
         fontWeight: "bold",
-        fontSize: 30,
+        fontSize: 25,
         marginTop: 20
     },
     text_name: {
         color: "#3e3c3e",
         fontWeight: "bold",
-        fontSize: 40,
-        marginTop: 5
+        fontSize: 35,
+        marginTop: 20
     },
     text_ingredients: {
         color: 'gray',
-        marginTop: 10
+        marginTop: 20
+    },
+    button: {
+        flex: 1,
+        alignItems: "center",
+        position: "absolute",
+        paddingVertical: 10,
+        borderRadius: 20,
+        left: 20,
+        right: 20,
+        bottom: 20,
+    },
+    text_order_now: {
+        color: "white",
+        fontWeight: "bold",
+        fontSize: 18,
     }
 })
