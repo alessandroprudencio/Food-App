@@ -33,7 +33,7 @@ cd Food-App
 ```
 
 ```
-npm install | yarn
+yarn | npm install
 ```
 
 ```
