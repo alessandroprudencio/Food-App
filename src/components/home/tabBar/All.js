@@ -28,7 +28,7 @@ export default All = ({ navigation }) => {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                     <LinearGradient
-                        colors={['#83a551', '#bbe878']}
+                        colors={['#e46700', '#ff9b49']}
                         start={{ x: 0, y: 1 }}
                         end={{ x: 1, y: 0 }}
                         style={styles.linearGradient}>
@@ -47,7 +47,7 @@ export default All = ({ navigation }) => {
                             </View>
                         </View>
                         <TouchableOpacity onPress={() => navigation.navigate('Details', { ...item })} style={styles.button}>
-                            <AntDesign name="arrowright" color="green" size={15} />
+                            <AntDesign name="arrowright" color="#ff9a47" size={15} />
                         </TouchableOpacity>
                     </LinearGradient>
                 )}
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
     },
     text_price: {
-        color: "green",
+        color: "#c15801",
         fontWeight: "bold"
     }
 })

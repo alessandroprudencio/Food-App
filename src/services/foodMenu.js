@@ -29,6 +29,14 @@ const foodMenu = [
                 image: require('../../assets/foods/tabua_gold.jpg'),
 
             },
+            {
+                id: 1,
+                name: "Tábua Low Carb 1KG",
+                price: 190,
+                rating: 4,
+                ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
+                image: require('../../assets/foods/tabua_low_carb.jpg'),
+            },
         ],
         color: "#325104",
     },
@@ -44,6 +52,22 @@ const foodMenu = [
                 ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
                 image: require('../../assets/foods/cesta_infantil.jpg'),
             },
+            {
+                id: 14,
+                name: "Cesta infantil",
+                price: 184.70,
+                rating: 5,
+                ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
+                image: require('../../assets/foods/cesta_infantil.jpg'),
+            },
+            {
+                id: 16,
+                name: "Cesta infantil",
+                price: 184.70,
+                rating: 5,
+                ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
+                image: require('../../assets/foods/cesta_infantil.jpg'),
+            },
         ],
         color: "#9ac25f",
         ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
@@ -53,6 +77,22 @@ const foodMenu = [
         id: 2,
         category: "Fatiados",
         foods: [
+            {
+                id: 10,
+                name: "Frios em geral",
+                price: 184.70,
+                rating: 5,
+                ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
+                image: require('../../assets/foods/fatiados.jpg'),
+            },
+            {
+                id: 10,
+                name: "Frios em geral",
+                price: 184.70,
+                rating: 5,
+                ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
+                image: require('../../assets/foods/fatiados.jpg'),
+            },
             {
                 id: 10,
                 name: "Frios em geral",
@@ -90,7 +130,7 @@ const foodMenu = [
     },
     {
         id: 6,
-        category: "Geléia",
+        category: "Geléias",
         foods: [
             {
                 id: 7,

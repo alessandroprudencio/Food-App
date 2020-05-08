@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text, View, Image, StyleSheet, FlatList, TouchableOpacity, Dimensions } from 'react-native'
-import popularFoods from '../../../services/popularFoods'
-const { width } = Dimensions.get('screen')
+import popularFoods from '../../../services/topFive'
 
 export default Popular = ({ navigation }) => {
 

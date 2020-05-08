@@ -3,7 +3,7 @@ const popularFoods = [
         id: 1,
         name: "Tábua Low Carb",
         price: 190,
-        comment: 'Muito bom, delecioso!',
+        comment: 'Muito bom, delecioso! Quero +',
         rating: 4,
         ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
         image: require('../../assets/foods/tabua_low_carb.jpg'),
@@ -45,15 +45,6 @@ const popularFoods = [
         ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
         image: require('../../assets/foods/tabua_gold.jpg'),
 
-    },
-    {
-        id: 6,
-        name: "Barca Tradicional",
-        price: 80,
-        comment: 'Tempero na medida certa',
-        rating: 5,
-        ingredients: ['alho', 'cebola', 'trigo', 'tomate', 'leite', 'ovos'],
-        image: require('../../assets/foods/barca_tradicional.jpg'),
     },
 ]
 
